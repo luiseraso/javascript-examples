@@ -4,10 +4,16 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
     "callback": "node src/callbacks/index.js",
-    "callback:challenge": "node src/callbacks/challenge.js"
+    "callback:challenge": "node src/callbacks/challenge.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "callback",
+    "promise",
+    "await"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
