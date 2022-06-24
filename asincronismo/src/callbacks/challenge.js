@@ -1,4 +1,4 @@
-console.log("============================callbacks/index.js============================")
+console.log("============================callbacks/index.js============================");
 
 let XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 const API = "https://rickandmortyapi.com/api/character/";
@@ -7,8 +7,8 @@ let basicFetchData = (urlApi) => {
     let xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function(event) {
-        if (this.readyState === 4 && this.status === 200) {
-            console.log(JSON.parse(this.responseText))                
+        if (xhttp.readyState === 4 && xhttp.status === 200) {
+            console.log(JSON.parse(xhttp.responseText))                
         } else {
             console.error(new Error(`ERROR => ${urlApi}`));        
         }
@@ -23,9 +23,9 @@ let fetchData = (urlApi, callback) => {
     let xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function(event) {
-        if (this.readyState === 4) {
-            if (this.status === 200) {
-                callback(null, JSON.parse(this.responseText))
+        if (xhttp.readyState === 4) {
+            if (xhttp.status === 200) {
+                callback(null, JSON.parse(xhttp.responseText))
             } else {
                 const error = new Error(`ERROR => ${urlApi}`);                
                 callback(error, null);

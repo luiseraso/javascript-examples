@@ -1,4 +1,4 @@
-console.log("============================callbacks/index.js============================")
+console.log("============================callbacks/index.js============================");
 
 function sum(num1, num2) {
   return num1 + num2;
